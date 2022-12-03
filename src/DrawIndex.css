@@ -1,0 +1,25 @@
+canvas {
+  border-radius: 25px;
+  /* height: 400px;
+   width: 500px; */
+  display: block;
+  margin: 50px auto;
+  box-shadow: 0 4px 11px 1px rgba(24, 23, 23, 0.459);
+}
+
+.clear {
+  margin: 30px auto;
+  display: block;
+  border: none;
+  padding: 10px;
+  width: 80px;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  background-color: rgb(1, 121, 69);
+  color: rgb(0, 0, 0);
+}
+
+button :active {
+  transform: scale(0.9);
+}

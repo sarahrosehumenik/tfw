@@ -1,0 +1,20 @@
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+}
+input[type="range"] {
+  accent-color: #ffffff48;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-family: "Tajawal", sans-serif;
+}
+
+input {
+  margin-top: 10px;
+}

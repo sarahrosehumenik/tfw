@@ -1,0 +1,52 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 50px;
+  font-family: "Tajawal", sans-serif;
+  box-shadow: 0 4px 11px 1px rgba(0, 0, 0, 0.459);
+}
+
+ul {
+  margin: 3px 0 0 0;
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  list-style: none;
+  margin: 2rem;
+ 
+}
+.title {
+  color:black;
+ 
+  left: 8px;
+  position: absolute;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  border: 0.5px black solid;
+  padding: 10px 7px 6px 7px;
+  border-radius: 50px;
+  background-color: white;
+}
+
+a:hover {
+  color: white;
+  background-color: black;
+}
+
+@media (max-width: 420px) {
+  li {
+    margin: 0.5rem;
+  }
+
+  .title {
+    left: 8px;
+    position: absolute;
+  }
+}
