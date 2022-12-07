@@ -100,7 +100,7 @@ export default function MoodIndex() {
                 <ButtonJoke setIsLoading={setIsLoading} setClassName={setClassName} setText={setText}  setImage={setImage} />
                 <ButtonMotiv formState={formState} setLoveText={setLoveText} setIsLoading={setIsLoading} setClassName={setClassName} setText={setText}  setImage={setImage} />
                 <ButtonUwu setIsLoading={setIsLoading} setClassName={setClassName} setText={setText} setImage={setImage} />
-                <ButtonBored setIsLoading={setIsLoading} setClassName={setClassName} setText={setText} setImage={setImage} />
+                <ButtonBored setLoveText={setLoveText} setIsLoading={setIsLoading} setClassName={setClassName} setText={setText} setImage={setImage} />
                 <ButtonCat setIsLoading={setIsLoading} setClassName={setClassName} setText={setText} setImage={setImage} />
             </div>
        </>

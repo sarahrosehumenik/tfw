@@ -9,6 +9,7 @@ export default function ButtonCat({ setText, setClassName, setIsLoading, setImag
         
         const options = {
             method: 'GET',
+         
            };
         fetch('https://api.thecatapi.com/v1/images/search', options)
             .then(response => response.json())

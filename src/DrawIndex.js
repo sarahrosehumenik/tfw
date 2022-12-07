@@ -59,12 +59,10 @@ const draw = (e) => {
            <div className="canvas-container">
             <canvas id="canvas"
                 style={{ backgroundColor: "white" }}
-                onMouseDown={startDrawing}
-                onMouseUp={endDrawing}
-                onMouseMove={draw}
-                onTouchDown={startDrawing}
-                onTouchUp={endDrawing}
-                onTouchMove={draw}
+                onPointerDown={startDrawing}
+                onPointerUp={endDrawing}
+                onPointerMove={draw}
+         
               
                 ref={canvasRef}
                 width={`500px`}
