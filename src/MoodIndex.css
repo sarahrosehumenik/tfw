@@ -1,7 +1,4 @@
-
-
-
- button {
+button {
   display: flex;
   border: none;
   border-bottom: 4px solid black;
@@ -12,24 +9,18 @@
   font-family:Arial, Helvetica, sans-serif;
   font-size: 25px;
   font-weight: 700;
-  
 } 
 
 .LOL {
-  
   background-color: rgb(255, 235, 246);
-
-
 }
 
 .motivate{
  background-color:rgb(203, 213, 250);
- 
 }
 
 .uwu {
 background-color: rgb(206, 255, 238);
-
 }
 
 .bored {
@@ -44,89 +35,57 @@ button:hover{
   background-color: rgb(255, 255, 0);
 }
 
-button:active {
-    transform: scale(0.9);
-}
 
 .all-buttons {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    
-    flex-wrap: nowrap;
-
-    grid-column: 4;
-    grid-row: 2/7;
-    border-left: 4px solid black;
-    border-right: 4px solid black;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-wrap: nowrap;
+  grid-column: 4;
+  grid-row: 2/7;
+  border-left: 4px solid black;
+  border-right: 4px solid black;
 }
-
-
-li {
-  color: rgb(41, 52, 198);
-}
-
 
 .quote-container {
-  
   grid-row: 2/7;
   grid-column: 1/4;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  font-family: "Tajawal", sans-serif;
   background-color: rgb(254, 254, 240);
   font-size: 20px;
- 
- 
-  
- 
-  
 }
 
 .image-container {
-
   height: 100%;
   width: 100%;
-
-
 }
 
 
 h1 {
-  margin: 0;
-
+ margin: 0;
  font-family: 'Playfair Display', serif;
  font-weight: 700;
  width: 92%;
  line-height: 75px;
  height: 100%;
- 
-  
 }
+
 .fadeIn { 
   animation: fadeIn 1s; 
 }
 
 .loading {
-    height: 40px;
-    margin: auto;
-
-}
+  height: 40px;
+  margin: auto;
+  }
 
 .image{
-   
-    
-   margin: auto;
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
-  
-
-    
-
-   
-
+  margin: auto;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
 }
 
 @keyframes fadeIn {

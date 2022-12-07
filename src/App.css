@@ -20,4 +20,5 @@ body {
   grid-template-rows: .5fr 2.3fr 2.3fr 2.3fr 2.3fr 2.3fr;
   position: absolute;
   bottom: 0;
+  
 }
