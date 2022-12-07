@@ -11,14 +11,7 @@ export default function DrawIndex() {
     const [lineColor, setLineColor] = useState("black");
     const [lineOpacity, setLineOpacity] = useState(0.1);
 
-    document.querySelector('canvas').addEventListener('wheel', preventScroll, {passive: false});
 
-    function preventScroll(e){
-        e.preventDefault();
-        e.stopPropagation();
-    
-        return false;
-    }
 
 
     useEffect(() => {
@@ -36,6 +29,7 @@ const startDrawing = (e) => {
     
     ctxRef.current.beginPath();
     ctxRef.current.moveTo(
+      
         e.nativeEvent.offsetX,
         e.nativeEvent.offsetY
     );
