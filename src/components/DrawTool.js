@@ -25,10 +25,10 @@ export default function DrawTool({ canvasRef, setLineColor, setLineOpacity, setL
             <label className="brush-opacity">Brush Opacity
                 <input
                     type="range"
-                    min="0"
-                    max="90"
+                    min="1"
+                    max="100"
                     onChange={(e) => {
-                        setLineOpacity(e.target.value / 90);}}
+                        setLineOpacity(e.target.value / 1000);}}
                 />
             </label>
             <button className="clear"
