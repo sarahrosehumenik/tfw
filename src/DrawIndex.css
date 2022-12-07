@@ -3,7 +3,7 @@
 
 .canvas-container {
   display: flex;
-  justify-content: center;
+  
   align-items: center;
   grid-row: 2/7;
   grid-column: 1/4;
@@ -19,7 +19,7 @@
   
 }
 canvas {
-  margin:1vh auto;
+  margin:5vh auto;
   border: 4px solid black;
   background-color: white;
   
