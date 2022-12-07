@@ -36,15 +36,12 @@ const endDrawing = () => {
     setIsDrawing(false);
 };
 
-const endDrawingTwo = (e) => {
-    let canvas = document.querySelector("canvas")
-    console.log(canvas)
-}
 
 const draw = (e) => {
     if (!isDrawing) {
         return;
     }
+    ctxRef.stopPropegation()
     ctxRef.current.lineTo(
         e.nativeEvent.offsetX,
         e.nativeEvent.offsetY
