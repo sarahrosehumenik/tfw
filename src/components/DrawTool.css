@@ -1,12 +1,13 @@
 .menu {
-grid-column: 4;
-grid-row: 2/7;
-border-left: 4px solid black;
-border-right: 4px solid black;
-height: 100%;
-z-index: 1;
-border-bottom: 4px solid black;
+  grid-column: 4;
+  grid-row: 2/7;
+  border-left: 4px solid black;
+  border-right: 4px solid black;
+  height: 100%;
+  z-index: 1;
+  border-bottom: 4px solid black;
 }
+
 input[type="range"] {
   accent-color: #ffffff48;
 }
@@ -23,27 +24,24 @@ label {
   border-bottom: 4px solid black;
 }
 
-
 .clear {
-  
   background-color: rgb(211, 211, 211);
   border:none;
   height: 23.25%
-
 }
 
+.clear:visited {
+  color: black;
+}
 
 .brush-color{
   background-color: rgb(255, 235, 246);
-
 }
 
 .brush-width {
   background-color:rgb(203, 213, 250);
-
 }
 
 .brush-opacity {
   background-color: rgb(206, 255, 238);
-
 }

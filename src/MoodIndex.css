@@ -11,7 +11,7 @@ button {
   font-weight: 700;
 } 
 
-::visited {
+button:visited {
   color: black;
 }
 
@@ -38,7 +38,6 @@ background-color: rgb(206, 255, 238);
 button:hover{
   background-color: rgb(255, 255, 0);
 }
-
 
 .all-buttons {
   display: flex;
@@ -68,7 +67,6 @@ button:hover{
   width: 100%;
 }
 
-
 #text {
  margin: 0;
  font-family: 'Playfair Display', serif;
@@ -85,7 +83,7 @@ button:hover{
 .loading {
   height: 40px;
   margin: auto;
-  }
+}
 
 .image{
   margin: auto;
@@ -97,7 +95,6 @@ button:hover{
 .love-container {
   width: 90%;
   height: 100%;
-  
 }
 
 .percent {
