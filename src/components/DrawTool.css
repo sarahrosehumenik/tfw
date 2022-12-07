@@ -3,6 +3,7 @@ grid-column: 4;
 grid-row: 2/7;
 border-left: 4px solid black;
 border-right: 4px solid black;
+height: 100%;
 }
 input[type="range"] {
   accent-color: #ffffff48;
@@ -23,7 +24,7 @@ label {
 .clear {
   border-bottom: 4px solid black;
   background-color: rgb(211, 211, 211);
-  height: 23.2%;
+  height: 22.45%;
 
 }
 

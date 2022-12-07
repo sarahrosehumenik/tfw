@@ -9,7 +9,9 @@
   grid-column: 1/4;
   background-color: rgb(254, 254, 240);
   width: 100%;
-  height: 100%;
+  height: 99.42%;
+  border-left: 4px solid black;
+  border-bottom: 4px solid black; 
  
   
 

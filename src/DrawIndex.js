@@ -61,8 +61,8 @@ const draw = (e) => {
                 onMouseUp={endDrawing}
                 onMouseMove={draw}
                 ref={canvasRef}
-                width={`400px`}
-                height={`590px`}
+                width={`500px`}
+                height={`400px`}
             />
            </div>
             <DrawTool

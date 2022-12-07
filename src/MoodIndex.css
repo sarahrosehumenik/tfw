@@ -55,6 +55,8 @@ button:hover{
   justify-content: center;
   background-color: rgb(254, 254, 240);
   font-size: 20px;
+  border-bottom: 4px solid black;
+  border-left: 4px solid black;
 }
 
 .image-container {
