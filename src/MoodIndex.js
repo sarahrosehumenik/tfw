@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./MoodIndex.css"
 import ButtonJoke from "./components/ButtonJoke";
-import ButtonMotiv from "./components/ButtonMotiv";
+import ButtonLove from "./components/ButtonLove";
 import ButtonUwu from "./components/ButtonUwu";
 import ButtonBored from "./components/ButtonBored";
 import ButtonCat from "./components/ButtonCat";
@@ -25,7 +25,7 @@ export default function MoodIndex() {
         });
       };
 
-      const handleSubmit = (event) => {
+    const handleSubmit = (event) => {
         const options = {
             method: 'GET',
             headers: {
@@ -40,14 +40,6 @@ export default function MoodIndex() {
                 console.log(response)
                 setLoveText(response)})
             .catch(err => console.error(err));
-
-       
-       
-       
-       
-       
-       
-       
        
         event.preventDefault(); 
         setFormState(initialState);
@@ -98,7 +90,7 @@ export default function MoodIndex() {
        </div>
             <div className="all-buttons">
                 <ButtonJoke setIsLoading={setIsLoading} setClassName={setClassName} setText={setText}  setImage={setImage} />
-                <ButtonMotiv formState={formState} setLoveText={setLoveText} setIsLoading={setIsLoading} setClassName={setClassName} setText={setText}  setImage={setImage} />
+                <ButtonLove formState={formState} setLoveText={setLoveText} setIsLoading={setIsLoading} setClassName={setClassName} setText={setText}  setImage={setImage} />
                 <ButtonUwu setIsLoading={setIsLoading} setClassName={setClassName} setText={setText} setImage={setImage} />
                 <ButtonBored setLoveText={setLoveText} setIsLoading={setIsLoading} setClassName={setClassName} setText={setText} setImage={setImage} />
                 <ButtonCat setIsLoading={setIsLoading} setClassName={setClassName} setText={setText} setImage={setImage} />

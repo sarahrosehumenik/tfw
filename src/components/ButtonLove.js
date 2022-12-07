@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export default function ButtonMotiv({setLoveText, formState, setText, setClassName, setIsLoading, setImage}) {
+export default function ButtonLove({setLoveText, formState, setText, setClassName, setIsLoading, setImage}) {
 
 const getLoveCalc = () => {
         setClassName("")
