@@ -11,7 +11,14 @@ export default function DrawIndex() {
     const [lineColor, setLineColor] = useState("black");
     const [lineOpacity, setLineOpacity] = useState(0.1);
 
+    document.querySelector('canvas').addEventListener('wheel', preventScroll, {passive: false});
 
+    function preventScroll(e){
+        e.preventDefault();
+        e.stopPropagation();
+    
+        return false;
+    }
 
 
     useEffect(() => {
@@ -26,7 +33,7 @@ export default function DrawIndex() {
 }, [lineColor, lineOpacity, lineWidth]);
 
 const startDrawing = (e) => {
-    e.stopPropagation()
+    
     ctxRef.current.beginPath();
     ctxRef.current.moveTo(
         e.nativeEvent.offsetX,
@@ -45,7 +52,7 @@ const draw = (e) => {
     if (!isDrawing) {
         return;
     }
-    e.stopPropagation()
+    
     ctxRef.current.lineTo(
         e.nativeEvent.offsetX,
         e.nativeEvent.offsetY
