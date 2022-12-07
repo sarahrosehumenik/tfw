@@ -11,6 +11,9 @@ export default function DrawIndex() {
     const [lineColor, setLineColor] = useState("black");
     const [lineOpacity, setLineOpacity] = useState(0.1);
 
+
+
+
     useEffect(() => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext("2d");
@@ -41,7 +44,7 @@ const draw = (e) => {
     if (!isDrawing) {
         return;
     }
-    canvasRef.stopPropegation()
+    e.stopPropagation()
     ctxRef.current.lineTo(
         e.nativeEvent.offsetX,
         e.nativeEvent.offsetY
