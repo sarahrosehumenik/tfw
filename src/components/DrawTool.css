@@ -5,11 +5,9 @@
   flex-direction:column;
   justify-content: space-evenly;
   border-left: 4px solid black;
-  border-right: 4px solid black;
   height: 100%;
   z-index: 1;
   background-color: rgb(211, 211, 211);
- 
 }
 
 input[type="range"] {
@@ -30,13 +28,11 @@ label {
 .clear, label {
   height: 100%;
 }
+
 .clear {
   background-color: rgb(211, 211, 211);
   border:none;
-
-  
   color: black;
-
 }
 
 .clear:visited {

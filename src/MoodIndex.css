@@ -49,7 +49,6 @@ button:hover{
   grid-column: 4;
   grid-row: 2/7;
   border-left: 4px solid black;
-  border-right: 4px solid black;
 }
 
 .quote-container {
@@ -60,8 +59,6 @@ button:hover{
   justify-content: center;
   background-color: rgb(254, 254, 240);
   font-size: 20px;
-  
-  border-left: 4px solid black;
 }
 
 .image-container {
@@ -134,4 +131,12 @@ button:hover{
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
+  }
+
+
+  @media (max-width: 540px) {
+    #text {
+      font-size: 20px;
+      line-height: 35px;
+    }
   }
