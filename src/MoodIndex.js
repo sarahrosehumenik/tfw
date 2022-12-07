@@ -13,24 +13,24 @@ export default function MoodIndex() {
     const [text, setText] = useState(["Pick your feels"])
     const [isLoading, setIsLoading] = useState(false)
     const [className, setClassName] = useState("fadeIn")
-    const [image, setImage] = useState([])
-
-
-
-
-
-
+    const [image, setImage] = useState()
+   
 
 
 
 
     return (
-        <>
+       
+      <>
             <div className="quote-container">
                 {isLoading ?
-                    <h1 className=""><img className="loading" src="https://i.gifer.com/ZlXo.gif" /></h1> :
-                    <h1 className={className}>{text}<img className="image" src={image}/></h1>}
-
+                    <h1 className="">Loading...</h1> :
+                    <>
+                  { !image ? 
+                    <h1 id="text" className={className}>{text}</h1> :
+                    <div className="image-container">
+                        <img className="image" src={image}/></div> }
+                    </>}
 
             </div>
             <div className="all-buttons">
@@ -40,7 +40,8 @@ export default function MoodIndex() {
             <ButtonBored setIsLoading={setIsLoading} setClassName={setClassName} setText={setText} setImage={setImage} />
             <ButtonCat setIsLoading={setIsLoading} setClassName={setClassName} setText={setText} setImage={setImage} />
             </div>
-        </>
+      </>
+       
     )
 
 

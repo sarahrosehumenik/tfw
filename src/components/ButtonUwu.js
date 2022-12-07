@@ -2,6 +2,7 @@ export default function ButtonUwu({setImage, setIsLoading, setClassName, setText
 
     
    const uwuQuote = () => { 
+
     setIsLoading(true)
     setText([])
     setClassName("")
@@ -19,8 +20,7 @@ export default function ButtonUwu({setImage, setIsLoading, setClassName, setText
         })
         .catch(err => console.error(err));
 
-    let body = document.querySelector("body")
-    body.style.background = 'linear-gradient(to left, rgb(143, 0, 117), rgb(255, 13, 243))'
+  
    }
 
     

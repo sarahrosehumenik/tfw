@@ -5,7 +5,8 @@ export default function ButtonBored({ setText, setClassName, setIsLoading, setIm
     const boredQuote = () => {
         setClassName("")
         setIsLoading(true)
-        setImage([])
+        setImage()
+      
 
         const options = {
             method: 'GET',
@@ -24,15 +25,13 @@ export default function ButtonBored({ setText, setClassName, setIsLoading, setIm
 
 
 
-        let body = document.querySelector("body")
-        body.style.background = 'linear-gradient(red,purple)'
-
+ 
 
        
 
     }
 
-    
+
 
 
     return (

@@ -1,6 +1,8 @@
 .menu {
-  display: flex;
-  justify-content: space-evenly;
+grid-column: 4;
+grid-row: 2/7;
+border-left: 4px solid black;
+border-right: 4px solid black;
 }
 input[type="range"] {
   accent-color: #ffffff48;
@@ -9,12 +11,33 @@ input[type="range"] {
 label {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: center;
   align-items: center;
-  font-family: "Tajawal", sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  height: 25%;
+  border-bottom: 4px solid black;
 }
 
-input {
-  margin-top: 10px;
+.clear {
+  border-bottom: 4px solid black;
+  background-color: rgb(211, 211, 211);
+  height: 23.2%;
+
+}
+
+.brush-color{
+  background-color: rgb(255, 235, 246);
+
+}
+
+.brush-width {
+  background-color:rgb(203, 213, 250);
+
+}
+
+.brush-opacity {
+  background-color: rgb(206, 255, 238);
+
 }

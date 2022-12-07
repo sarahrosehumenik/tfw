@@ -85,34 +85,28 @@ export default function DrawIndex() {
 
 
     return (
-        <div>
-            {/* <img id="S2" className="canvasimg" src="https://i.imgur.com/G4WIrCL.png"></img> */}
-            <canvas id="myCanvas"
-                style={{ backgroundColor: "rgba(255, 255, 255, .3)" }}
+        <>
+           <div className="canvas-container">
+            <canvas id="canvas"
+                style={{ backgroundColor: "white" }}
                 onMouseDown={startDrawing}
                 onMouseUp={endDrawing}
                 onMouseMove={draw}
                 ref={canvasRef}
-                // width={`700px`}
-                height={`400px`}
+                
+                width={`400px`}
+                height={`590px`}
             />
-
+           </div>
             <DrawTool
-
+                canvasRef={canvasRef}
                 setLineColor={setLineColor}
                 setLineWidth={setLineWidth}
                 setLineOpacity={setLineOpacity}
             />
-            <button className="clear"
-                onClick={() => {
-                    const ctx = canvasRef.current.getContext('2d');
-                    ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
-                }}
-            >
-                Clear
-            </button>
+      
 
-        </div>
+        </>
 
 
     )

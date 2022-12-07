@@ -6,13 +6,13 @@ import "./DrawTool.css"
 
 
 
-export default function DrawTool({ setLineColor, setLineOpacity, setLineWidth }) {
+export default function DrawTool({ canvasRef, setLineColor, setLineOpacity, setLineWidth }) {
 
 
 
     return (
         <div className="menu">
-            <label>Brush Color
+            <label className="brush-color">Brush Color
                 <input className="picker"
                     type="color"
                     onChange={(e) => {
@@ -21,7 +21,7 @@ export default function DrawTool({ setLineColor, setLineOpacity, setLineWidth })
                 />
             </label>
 
-            <label>Brush Width
+            <label className="brush-width">Brush Width
                 <input
                     type="range"
 
@@ -32,7 +32,7 @@ export default function DrawTool({ setLineColor, setLineOpacity, setLineWidth })
                     }}
                 />
             </label>
-            <label>Brush Opacity
+            <label className="brush-opacity">Brush Opacity
                 <input
                     type="range"
                     min="0.1"
@@ -42,6 +42,14 @@ export default function DrawTool({ setLineColor, setLineOpacity, setLineWidth })
                     }}
                 />
             </label>
+            <button className="clear"
+                onClick={() => {
+                    const ctx = canvasRef.current.getContext('2d');
+                    ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
+                }}
+            >
+                Clear
+            </button>
 
 
         </div>

@@ -7,7 +7,7 @@ export default function ButtonMotiv({setText, setClassName, setIsLoading, setIma
     const motivationalQuote = () => {
         setClassName("")
         setIsLoading(true)
-        setImage([])
+        setImage()
         
         const options = {
             method: 'GET',
@@ -25,8 +25,6 @@ export default function ButtonMotiv({setText, setClassName, setIsLoading, setIma
             })
             .catch(err => console.error(err));
 
-        let body = document.querySelector("body")
-        body.style.background = 'linear-gradient(rgb(47, 187, 166), rgb(140, 104, 104))'
 
 
 

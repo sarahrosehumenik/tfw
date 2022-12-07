@@ -1,4 +1,5 @@
 import './App.css';
+import './MoodIndex.css';
 import { Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav.js"
 import DrawIndex from "./DrawIndex.js";
@@ -7,7 +8,8 @@ import Landing from "./Landing.js";
 
 function App() {
   return (
-    <div className="App">
+
+    <div className="layout">
 
       <Nav />
       <Routes>

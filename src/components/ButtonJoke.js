@@ -1,4 +1,5 @@
 import React from "react";
+import "../MoodIndex.css";
 
 export default function ButtonJoke({ setText, setClassName, setIsLoading, setImage }) {
 
@@ -7,7 +8,7 @@ export default function ButtonJoke({ setText, setClassName, setIsLoading, setIma
 
         setClassName("")
         setIsLoading(true)
-        setImage([])
+        setImage()
 
         const options = {
             method: 'GET',
@@ -29,8 +30,6 @@ export default function ButtonJoke({ setText, setClassName, setIsLoading, setIma
 
 
 
-        let body = document.querySelector("body")
-        body.style.background = 'linear-gradient(pink,blue)'
 
     }
 

@@ -20,8 +20,7 @@ export default function ButtonCat({ setText, setClassName, setIsLoading, setImag
             })
             .catch(err => console.error(err));
 
-        let body = document.querySelector("body")
-        body.style.background = 'linear-gradient(rgb(40, 58, 213), rgb(21, 22, 87))'
+      
 
 
 
@@ -30,6 +29,6 @@ export default function ButtonCat({ setText, setClassName, setIsLoading, setImag
 
 
     return(
-        <button onClick={()=> getCatImage()} className="cat">= Meow =</button>
+        <button className="cat" onClick={()=> getCatImage()} className="cat">= Meow =</button>
     )
 }
