@@ -27,7 +27,8 @@ label {
 .clear {
   background-color: rgb(211, 211, 211);
   border:none;
-  height: 23.25%
+  height: 23.25%;
+  color: black;
 }
 
 .clear:visited {
