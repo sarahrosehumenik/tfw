@@ -5,15 +5,16 @@ export default function ButtonBored({ setText, setClassName, setIsLoading, setIm
     const boredQuote = () => {
         setClassName("")
         setIsLoading(true)
-        setImage()
+        setText('')
       
       const options = {
             method: 'GET',
        };
-        fetch('http://www.boredapi.com/api/activity/', options)
+        fetch(' https://api.imgflip.com/get_memes', options)
             .then(response => response.json())
             .then(response => {
-                setText(`You can...${response.activity}`)
+                // setImage(response.memes.url)
+                setImage(response.data.memes[2].url)
                 setIsLoading(false)
                 setClassName("fadeIn")
             })

@@ -15,7 +15,7 @@ button {
   background-color: rgb(255, 235, 246);
 }
 
-.motivate{
+.love {
  background-color:rgb(203, 213, 250);
 }
 
@@ -89,6 +89,43 @@ button:hover{
   object-fit: cover;
   height: 100%;
 }
+
+.love-container {
+  width: 90%;
+  height: 100%;
+  
+}
+
+.percent {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.result {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+
+}
+
+.love-form {
+  width: 100%;
+}
+ .love-input {
+   border: 3px solid black;
+   margin: 1vh;
+ }
+
+ .love-button {
+   border: 3px solid black;
+   width: 30%;
+   margin: 1vh;
+   background:linear-gradient(to left, rgb(255, 235, 246),rgb(203, 213, 250),rgb(206, 255, 238),rgb(255, 206, 169), rgb(211, 211, 211));
+ }
+
+ ::placeholder{
+   color: black;
+ }
+
 
 @keyframes fadeIn {
     0% { opacity: 0; }

@@ -1,31 +1,16 @@
 import React from "react";
 
 
-export default function ButtonMotiv({setText, setClassName, setIsLoading, setImage}) {
+export default function ButtonMotiv({setLoveText, formState, setText, setClassName, setIsLoading, setImage}) {
 
-
-    const motivationalQuote = () => {
+const getLoveCalc = () => {
         setClassName("")
         setIsLoading(true)
+        setText('')
         setImage()
-        
-        const options = {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': '37ca969405msh1437660d6e030dbp15c6ebjsna316a5d2a3f8',
-                'X-RapidAPI-Host': 'inspiring-quotes.p.rapidapi.com'
-            }
-        };
-        fetch('https://inspiring-quotes.p.rapidapi.com/random?author=Albert', options)
-            .then(response => response.json())
-            .then(response => {
-                setText(response.quote)
-                setClassName("fadeIn")
-                setIsLoading(false)
-            })
-            .catch(err => console.error(err));
+        setLoveText()
 }
 
-    return(<button className="motivate" onClick={()=> motivationalQuote()}>Motivate</button>)
+    return(<button className="love" onClick={()=> getLoveCalc()}>Love</button>)
 
 }
