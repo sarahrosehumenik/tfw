@@ -11,6 +11,10 @@ button {
   font-weight: 700;
 } 
 
+button::visited {
+  color: black;
+}
+
 .LOL {
   background-color: rgb(255, 235, 246);
 }
@@ -104,21 +108,22 @@ button:hover{
 .result {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
-
 }
 
 .love-form {
+  margin-top: 5vh;
   width: 100%;
+  
 }
  .love-input {
    border: 3px solid black;
-   margin: 1vh;
+   margin-right: 2vh;
  }
 
  .love-button {
    border: 3px solid black;
    width: 30%;
-   margin: 1vh;
+   
    background:linear-gradient(to left, rgb(255, 235, 246),rgb(203, 213, 250),rgb(206, 255, 238),rgb(255, 206, 169), rgb(211, 211, 211));
  }
 
