@@ -7,14 +7,10 @@ export default function ButtonBored({ setText, setClassName, setIsLoading, setIm
         setIsLoading(true)
         setImage()
       
-
-        const options = {
+      const options = {
             method: 'GET',
-       
-        };
+       };
         fetch('http://www.boredapi.com/api/activity/', options)
-
-
             .then(response => response.json())
             .then(response => {
                 setText(`You can...${response.activity}`)
@@ -22,21 +18,8 @@ export default function ButtonBored({ setText, setClassName, setIsLoading, setIm
                 setClassName("fadeIn")
             })
             .catch(err => console.error(err));
+}
 
-
-
- 
-
-       
-
-    }
-
-
-
-
-    return (
-
-        <button className="bored" onClick={()=> boredQuote()}>I'm Bored</button>
-    )
+        return (<button className="bored" onClick={()=> boredQuote()}> Bored</button>)
 
 }

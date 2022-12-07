@@ -3,9 +3,7 @@ import "../MoodIndex.css";
 
 export default function ButtonJoke({ setText, setClassName, setIsLoading, setImage }) {
 
-
     const jokeQuote = () => {
-
         setClassName("")
         setIsLoading(true)
         setImage()
@@ -18,8 +16,6 @@ export default function ButtonJoke({ setText, setClassName, setIsLoading, setIma
             }
         };
         fetch('https://jokes-by-api-ninjas.p.rapidapi.com/v1/jokes', options)
-
-
             .then(response => response.json())
             .then(response => {
                 setText(response[0].joke)
@@ -27,15 +23,8 @@ export default function ButtonJoke({ setText, setClassName, setIsLoading, setIma
                 setIsLoading(false)
             })
             .catch(err => console.error(err));
+}
 
 
-
-
-    }
-
-
-    return (
-
-        <button className="LOL" onClick={() => jokeQuote()}>LOL</button>
-    )
+    return (<button className="LOL" onClick={() => jokeQuote()}>LOL</button>)
 }

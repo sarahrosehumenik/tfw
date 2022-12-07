@@ -4,85 +4,53 @@ import DrawTool from "./components/DrawTool.js";
 import "./DrawIndex.css"
 export default function DrawIndex() {
 
-
     const canvasRef = useRef(null);
     const ctxRef = useRef(null);
-
-
     const [isDrawing, setIsDrawing] = useState(false);
     const [lineWidth, setLineWidth] = useState(5);
     const [lineColor, setLineColor] = useState("black");
     const [lineOpacity, setLineOpacity] = useState(0.1);
 
-
-
-
-    // Initialization when the component
-    // mounts for the first time
     useEffect(() => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext("2d");
-
         ctx.lineCap = "round";
         ctx.lineJoin = "round";
         ctx.globalAlpha = lineOpacity;
         ctx.strokeStyle = lineColor;
         ctx.lineWidth = lineWidth;
         ctxRef.current = ctx;
+}, [lineColor, lineOpacity, lineWidth]);
 
+const startDrawing = (e) => {
+    ctxRef.current.beginPath();
+    ctxRef.current.moveTo(
+        e.nativeEvent.offsetX,
+        e.nativeEvent.offsetY
+    );
+    setIsDrawing(true);
+};
 
-    }, [lineColor, lineOpacity, lineWidth]);
+const endDrawing = () => {
+    ctxRef.current.closePath();
+    setIsDrawing(false);
+};
 
+const endDrawingTwo = (e) => {
+    let canvas = document.querySelector("canvas")
+    console.log(canvas)
+}
 
-
-
-
-
-
-    // Function for starting the drawing
-    const startDrawing = (e) => {
-        ctxRef.current.beginPath();
-        ctxRef.current.moveTo(
-            e.nativeEvent.offsetX,
-            e.nativeEvent.offsetY
-        );
-        setIsDrawing(true);
-    };
-
-    // Function for ending the drawing
-    const endDrawing = () => {
-        ctxRef.current.closePath();
-        setIsDrawing(false);
-    };
-
-    const endDrawingTwo = (e) => {
-        let canvas = document.querySelector("canvas")
-        console.log(canvas)
-
-
+const draw = (e) => {
+    if (!isDrawing) {
+        return;
     }
-
-
-
-    const draw = (e) => {
-        if (!isDrawing) {
-            return;
-        }
-
-        ctxRef.current.lineTo(
-            e.nativeEvent.offsetX,
-            e.nativeEvent.offsetY
-        );
-
+    ctxRef.current.lineTo(
+        e.nativeEvent.offsetX,
+        e.nativeEvent.offsetY
+    )
         ctxRef.current.stroke();
-
-
-    };
-
-
-
-
-
+ };
 
     return (
         <>
@@ -93,7 +61,6 @@ export default function DrawIndex() {
                 onMouseUp={endDrawing}
                 onMouseMove={draw}
                 ref={canvasRef}
-                
                 width={`400px`}
                 height={`590px`}
             />
@@ -104,10 +71,6 @@ export default function DrawIndex() {
                 setLineWidth={setLineWidth}
                 setLineOpacity={setLineOpacity}
             />
-      
-
-        </>
-
-
+      </>
     )
 };

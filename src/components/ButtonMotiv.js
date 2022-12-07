@@ -24,16 +24,8 @@ export default function ButtonMotiv({setText, setClassName, setIsLoading, setIma
                 setIsLoading(false)
             })
             .catch(err => console.error(err));
+}
 
-
-
-
-    }
-
-    return(
-        <button className="motivate" onClick={()=> motivationalQuote()}>Motivate me</button>
-
-
-    )
+    return(<button className="motivate" onClick={()=> motivationalQuote()}>Motivate</button>)
 
 }

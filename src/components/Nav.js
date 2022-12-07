@@ -4,13 +4,7 @@ import "../App.css"
 
 export default function Nav() {
 
-   
- 
-
-
-
-
-    return (
+   return (
         <>
             <nav>
                 <ul>

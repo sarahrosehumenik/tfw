@@ -9,8 +9,7 @@ export default function ButtonCat({ setText, setClassName, setIsLoading, setImag
         
         const options = {
             method: 'GET',
-           
-        };
+           };
         fetch('https://api.thecatapi.com/v1/images/search', options)
             .then(response => response.json())
             .then(response => {
@@ -19,16 +18,9 @@ export default function ButtonCat({ setText, setClassName, setIsLoading, setImag
                 setIsLoading(false)
             })
             .catch(err => console.error(err));
-
-      
-
-
-
-    }
+}
 
 
 
-    return(
-        <button className="cat" onClick={()=> getCatImage()} className="cat">= Meow =</button>
-    )
+    return(<button className="cat" onClick={()=> getCatImage()} className="cat">Meow</button>)
 }
