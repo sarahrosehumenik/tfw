@@ -41,7 +41,7 @@ const draw = (e) => {
     if (!isDrawing) {
         return;
     }
-    ctxRef.stopPropegation()
+    canvasRef.stopPropegation()
     ctxRef.current.lineTo(
         e.nativeEvent.offsetX,
         e.nativeEvent.offsetY
