@@ -26,6 +26,7 @@ export default function DrawIndex() {
 }, [lineColor, lineOpacity, lineWidth]);
 
 const startDrawing = (e) => {
+    e.stopPropagation()
     ctxRef.current.beginPath();
     ctxRef.current.moveTo(
         e.nativeEvent.offsetX,
