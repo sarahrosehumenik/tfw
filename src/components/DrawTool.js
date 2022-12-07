@@ -25,7 +25,7 @@ export default function DrawTool({ canvasRef, setLineColor, setLineOpacity, setL
             <label className="brush-opacity">Brush Opacity
                 <input
                     type="range"
-                    min="0.1"
+                    min="0"
                     max="90"
                     onChange={(e) => {
                         setLineOpacity(e.target.value / 90);}}
